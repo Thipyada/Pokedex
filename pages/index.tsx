@@ -7,7 +7,7 @@ import CardMedia from "@mui/material/CardMedia"
 import CardContent from "@mui/material/CardContent"
 import { Pokedex, Type } from '../types/pokedex'
 import { Typography } from "@mui/material"
-import { styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles'
 import Head from "next/head"
 
 interface pokemonProfile {
