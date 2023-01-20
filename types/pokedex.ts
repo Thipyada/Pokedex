@@ -178,3 +178,11 @@ export interface Type {
   slot: number;
   type: Species;
 }
+
+export interface pokemonProfile {
+  name: string
+  id: number
+  typeForSearch: string[]
+  type: Type[]
+  image: string
+}

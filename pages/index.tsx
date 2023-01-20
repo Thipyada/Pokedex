@@ -2,21 +2,14 @@ import { useState, useEffect } from "react"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import { TextField } from "@mui/material"
-import Card from "@mui/material/Card"
-import CardMedia from "@mui/material/CardMedia"
-import CardContent from "@mui/material/CardContent"
-import { Pokedex, Type } from '../types/pokedex'
-import { Typography } from "@mui/material"
-import { styled } from '@mui/material/styles'
-import Head from "next/head"
 
-interface pokemonProfile {
-  name: string
-  id: number
-  typeForSearch: string[]
-  type: Type[]
-  image: string
-}
+import { Pokedex, pokemonProfile } from '../types/pokedex'
+import { Typography } from "@mui/material"
+
+import Head from "next/head"
+import PokemonCard from "@/component/PokemonCard"
+
+
 export default function Home() {
 
   // store pokemon list
@@ -147,30 +140,8 @@ export default function Home() {
 
         <Grid container spacing={1} className="pokeList">
 
-          {/* {pokemonCard()} */}
-          {(pokeFilter.length > 0) ? pokeFilter.map((item) => (
-            <Grid item xs={3} key={item.id}>
-
-              <Card className="pokeCard" sx={{ maxWidth: 345, height: '100%' }}>
-                <CardMedia component="img"
-                  className="pokePic" image={item.image} width='100%' />
-                <CardContent>
-                  <div className="pokeName">{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</div>
-                  <div className="pokeId">#{item.id}</div>
-                  <div className="pokeType">
-                    {item.type.map((list) => (
-                      <li key={list.slot}>{list.type.name}</li>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-            </Grid>
-          ))
-            :
-            (
-              <Typography variant="h3" className="pokeAlert">We cannot find your pokemon</Typography>
-            )}
+          {/* {pokemonCard() */}
+          <PokemonCard pokeFilter={pokeFilter} />
         </Grid>
       </Box>
 
