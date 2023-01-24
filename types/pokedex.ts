@@ -172,6 +172,7 @@ export interface Stat {
   base_stat: number;
   effort:    number;
   stat:      Species;
+  statName: string
 }
 
 export interface Type {
@@ -185,4 +186,27 @@ export interface pokemonProfile {
   typeForSearch: string[]
   type: Type[]
   image: string
+}
+
+export interface PokeProfile {
+  name: string
+  id: number
+  height: number
+  weight: number
+
+  type: Type[]
+  typeForSearch: string[],
+
+  image: {
+    back: string
+    front: string
+    frontShiny: string
+    backShiny: string
+  }
+
+  stats: Stat[]
+
+  abilities: Ability[]
+  abilityForDisplay: string[]
+
 }

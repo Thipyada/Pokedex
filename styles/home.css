@@ -1,39 +1,101 @@
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-
-.pokeHead {
-  background-color: rgb(241, 114, 114);
-  color: aliceblue;
-  padding: 5px;
-}
-
+/* SearchBox */
 .pokeSearch {
-  margin: 20px 0;
+  margin: 0 !important;
+  padding: 20px;
+
+  background-color: lightseagreen;
 }
 
+/* SearchBox Input */
+.Mui-focused {
+  color: gray !important;
+}
+
+.MuiInputBase-root {
+  background-color: white;
+}
+
+/* Pokemon Card Grid */
 .pokeList {
-  justify-content: center;
+  padding: 20px;
 }
 
-.pokeAlert {
-  text-align: center;
+/* Each Pokemon Card */
+
+.MuiCard-root {
+  border-radius: 20px;
+}
+
+.css-1xhj18k {
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+
+/* Each Pokemon Profile Page */
+
+.pokeSearchPage {
+  position: relative;
+  padding: 20px;
+  background-color: lightseagreen;
+}
+
+/* .pokeSearchPage h2 {
+  margin: 0;
+} */
+
+.pokeSearchPage input {
+  width: 100%;
+  padding: 15px 15px;
+  border-radius: 10px;
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.pokeSearchPage input:focus {
+  outline: none;
+}
+
+.pokeSearchPage ul {
+  position: absolute;
+  top: calc(100% - 20px);
+  width: calc(100% - 70px);
+  padding: 5px 15px;
+  margin: 0;
+  border: 2px solid black;
+  list-style: none;
+  border-radius: 10px;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.pokeSearchPage li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.pokeSearchPage a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.pokeSearchPage a:hover {
+  color: blue;
+}
+
+.PokeProfile {
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+/* Swiper */
+
+.pokeSwiperBox {
+  max-width: 345px;
+  height: 100%;
 }
