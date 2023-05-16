@@ -31,7 +31,7 @@ export default function Home() {
   }
 
   const fetchData = () => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=200")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=2000")
       .then((response) => response.json())
       .then((allPokemon) => allPokemon.results.forEach(function (pokemon: { url: string }) {
         fetchPokemonData(pokemon);
